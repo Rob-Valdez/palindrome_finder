@@ -18,3 +18,4 @@ soup = BeautifulSoup(page.content, 'html.parser')
 #TODO: click status
 
 #TODO: select status as not available
+
