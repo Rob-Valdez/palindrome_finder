@@ -1,18 +1,21 @@
 #a function that uses recursion to find palindromes
 
-def palindrome(word):
-    if len(word) <= 1:
+def palindrome(n):
+    n = n.replace(" ", "")
+    n = n.replace(",", "")
+    n = n.lower()
+    if len(n) <= 1:
         return True
-    elif len(word) == 2:
-        if word[0] == word[-1]:
+    elif len(n) == 2:
+        if n[0] == n[-1]:
             return True
         else:
             pass
-    elif word[0] != word[-1]:
+    elif n[0] != n[-1]:
         return False
-    word = word.lstrip(word[0])
-    word = word.rstrip(word[-1])
-    return palindrome(word)
+    n = n.lstrip(n[0])
+    n = n.rstrip(n[-1])
+    return palindrome(n)
 
 
-print(palindrome(input("Type the word you want to test for palindrome characteristics: ")))
+print(palindrome(input("Type the word or phrase you want to test for palindrome characteristics: ")))
