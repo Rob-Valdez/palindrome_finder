@@ -1,6 +1,7 @@
 #a function that uses recursion to find palindromes
 
 def palindrome(n):
+    """receives an input and checks to see if it's a palindrome"""
     n = n.replace(" ", "")
     n = n.replace(",", "")
     n = n.lower()
